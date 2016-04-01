@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BackLog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="css/themes/mobile2.css"/>
+    <link rel="stylesheet" href="css/themes/jquery.mobile2.icons.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        img.fullscreen {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div data-role="page" id="home">
+
+    <header data-role="header" data-theme="b">
+        <h1>My BackLog</h1>
+        <nav data-role="navbar">
+            <ul>
+                <li>
+                    <a href="#home">Log</a>
+                </li>
+                <li>
+                    <a href="#about">about</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div data-role="content">
+        <fieldset data-role="controlgroup">
+
+            <ul data-role="listview">
+                <li>
+                    <a href="#newLog"> New log item</a>
+                    <button onclick="deletelast();">
+                        delete last item
+                    </button>
+
+                </li>
+                <ul id="logItems" data-role="listview" data-inset="true"></ul>
+                <br>
+
+            </ul>
+        </fieldset>
+    </div>
+</div>
+
+<div data-role="page" id="newLog">
+    <header data-role="header">
+        <h1>My BackLog</h1>
+        <nav data-role="navbar">
+            <ul>
+                <li>
+                    <a href="#home">Log</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <ul>
+        <li>
+            <input type="text" name="name" placeholder="Name of item">
+            <ul id="items" data‐role="listview" data‐inset="true"></ul>
+            <br>
+        </li>
+        <li>
+
+            <input id="henk" type="text" name="genre" placeholder="Genre">
+            <ul id="items" data‐role="listview" data‐inset="true"></ul>
+            <br>
+        </li>
+
+        <button onclick="add();">
+            Add
+        </button>
+        <a href="#home">
+            <button>
+                Back
+            </button>
+        </a>
+
+    </ul>
+</div>
+
+<div id="itemDetail" data-role="page">
+    <header data-role="header" data-theme="b">
+        <h1>My BackLog</h1>
+        <nav data-role="navbar">
+            <ul>
+                <li>
+                    <a href="#Log">Games</a>
+                </li>
+                <li>
+                    <a href="#about"> About</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div>
+        <ul data‐role="listview">
+            <li>
+                <h3>Name item</h3>
+                <input id="detailname" type="text" name="dname" placeholder="Name of item" value="">
+                <br>
+
+                <h3>Genre</h3>
+
+                <input id="detailgenre" type="text" name="dgenre" placeholder="Genre">
+                <br>
+
+                <a href="#home">
+                    <button onclick="update();">
+                        Update
+                    </button>
+                </a>
+
+                <a href="#home">
+                    <button onclick="deleteSolo();">
+                        Delete
+                    </button>
+                </a>
+
+                <a href="#home">
+                    <button>
+                        Back
+                    </button>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="about" data-role="page">
+    <header data-role="header">
+        <h1>My BackLog</h1>
+        <nav data-role="navbar">
+            <ul>
+                <li>
+                    <a href="#Log">Games</a>
+                </li>
+                <li>
+                    <a href="#about">Movies and Series</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+<div>
+    <ul data-role="listview" data-inset="true">
+        <li data-role="collapsible" data-corners="true">
+            <h2>Made by</h2>
+            <h3>Darryl van Denzel</h3>
+        </li>
+        <li data-role="collapsible" data-corners="true">
+            <h2>StudentNumber</h2>
+            <h3>500713267</h3>
+        </li>
+        <li data-role="collapsible" data-corners="true">
+            <h2>Class</h2>
+            <h3>IVMD1</h3>
+        </li>
+    </ul>
+
+</div>
+
+</div>
+
+</body>
+</html>
